@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Js Övn 4 - funktioner</title>
+	</head>
+	<body>
+		<div id="meal"></div>
+
+		<div id="upg2">
+			<input type="number" id="a">
+			<input type="number" id="b">
+			<p id="operator"></p>
+			<button onclick="setOperator('+')">+</button>
+			<button onclick="setOperator('-')">-</button>
+			<button onclick="setOperator('/')">/</button>
+			<button onclick="setOperator('*')">*</button>
+			<button onclick="setOperator('%')">%</button>
+			<button onclick="showResult(calculate())">Calculate!</button>
+			<div id="resultat"></div>
+		</div>
+
+		<button onclick="getDate()">Get today's date!</button>
+		<div id="date"></div>
+
+		<div id="loadtime"></div>
+
+		<button onclick="dagensDag()">Dag!</button>
+		<p id="dag"></p>
+
+		<button onclick="monthAndYear()">Month & Year</button>
+		<p id="month-and-year"></p>
+
+		<script src="main.js"></script>
+		<script>
+			function dagensDag(){
+
+				var d = new Date();
+				var weekday=new Array(7);
+				weekday[0]="Söndag";
+				weekday[1]="Måndag";
+				weekday[2]="Tisdag";
+				weekday[3]="Onsdag";
+				weekday[4]="Torsdag";
+				weekday[5]="Fredag";
+				weekday[6]="Lördag";
+
+
+				var x = document.getElementById("dag");
+				x.innerHTML = weekday[d.getDay()];
+			}
+		</script>
+
+	</body>
+</html>
